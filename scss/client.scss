@@ -1,0 +1,223 @@
+@import "flex";
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+// ============= header =============
+.header {
+  padding: 20px 0;
+  width: 100%;
+  background-color: #F8EDE4;
+  .header-left {
+    .logo {
+      .fa-bars {
+        font-size: 35px;
+        display: none;
+      }
+    }
+  }
+  .header-right {  
+    width: 60%;
+    
+    .search {
+      width: 40%;
+      position: relative;
+      
+      input {
+        width: 100%;
+        padding: 9px 40px 9px 20px;
+        font-size: 14px;
+        color: black;
+        background: #EED0B9;
+        box-shadow: 0 0 0 0 #fff inset;
+        font-weight: 200;
+        border-radius: 20px;
+        &::-webkit-input-placeholder {
+          color: black;
+        }
+      }
+      .fa-search {
+        position: absolute;
+        top: 30%;
+        right: 15px;
+        color: black;
+        transition: 0.2s all;
+        cursor: pointer;
+        &:hover {
+          color: rgb(200, 162, 136);
+          transition: 0.2s all;
+        }
+      }
+    }
+    .fa-user, .fa-shopping-cart, .fa-heart {
+      margin-right: 5px;
+    }
+    
+    .login, .cart, .like {
+      a {
+        color: #000;
+      }
+      cursor: pointer;
+      &:hover {
+        i, a {
+          color: rgb(200, 162, 136);
+          transition: 0.2s all;
+        }
+      }
+    }
+  }
+}
+// ============= header =============
+
+// ============= navigation =============
+.header-nav {
+  padding: 10px;
+  background-color: #F8EDE4;
+  ul {
+    li {
+      ul {
+        li {
+          margin-right: 40px;
+          a {
+            color: rgb(184, 93, 36);
+            font-size: 22px;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          &:hover {
+            i, a {
+              color: rgb(53, 126, 98);
+              transition: 0.5s;
+            }
+          }
+          
+        }
+      }
+      
+    }
+  }
+}
+
+//------- responsive -------
+//các màn hình thường gặp
+// xs = extra small < 576
+// sm = small < 768
+// md = medium < 992
+// lg = large < 1200
+// xl = extra large >= 1200
+@media only screen and (max-width: 1210px) {
+  .container {
+    width: 992px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1002px) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+  }
+  .header {
+    .header-right {  
+      width: 60%;
+      
+      .search {
+        width: 60%;
+      }
+      .fa-user, .fa-shopping-cart, .fa-heart {
+        margin-right: 2px;
+      }
+      
+      .login, .cart, .like {
+        font-size: 22px;
+        a {
+          display: none;
+        }
+        &:hover {
+          i, a {
+            color: rgb(200, 162, 136);
+            transition: 0.2s all;
+          }
+        }
+      }
+    }
+  }
+  .header-nav {
+    ul {
+      li {
+        ul {
+          li {
+            margin-right: 20px;
+            a {
+              font-size: 18px;
+            }
+          }
+        }    
+      }     
+    }  
+  }
+}
+@media only screen and (max-width: 778px) {
+  .container {
+    width: 576px;
+    margin: 0 auto;
+  }
+  .header {
+    .header-left {
+      .logo {
+        a {
+          display: none;
+        }
+        .fa-bars {
+          display: block;
+          cursor: pointer;
+        }
+        
+      }
+    }
+    .header-right {  
+      width: 90%;
+      
+      .search {
+        width: 70%;
+      }
+      .fa-user, .fa-shopping-cart, .fa-heart {
+        margin-right: 2px;
+      }
+      
+      .login, .cart, .like {
+        font-size: 22px;
+        a {
+          display: none;
+        }
+        &:hover {
+          i, a {
+            color: rgb(200, 162, 136);
+            transition: 0.2s all;
+          }
+        }
+      }
+    }
+  }
+  .header-nav {
+    ul {
+      li {
+        ul {
+          li {
+            display: none;
+          }
+        }    
+      }     
+    }  
+  }
+}
+@media only screen and (max-width: 587px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+//------- responsive -------
+// ============= navigation =============

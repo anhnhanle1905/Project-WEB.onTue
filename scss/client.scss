@@ -5,13 +5,20 @@
   margin: 0 auto;
 }
 
+
+// note color
+// #c7ecee
+// #dff9fb
+
 // ============= header =============
+
 .header {
   padding: 20px 0;
   width: 100%;
   background-color: #F8EDE4;
   .header-left {
     .logo {
+      background-color: none;
       .fa-bars {
         font-size: 35px;
         display: none;
@@ -73,6 +80,7 @@
 
 // ============= navigation =============
 .header-nav {
+  
   padding: 10px;
   background-color: #F8EDE4;
   ul {
@@ -81,16 +89,19 @@
         li {
           margin-right: 40px;
           a {
-            color: rgb(184, 93, 36);
-            font-size: 22px;
+            font-family: 'Quicksand', sans-serif !important;
+            color: #000;
+            font-size: 15px !important;
+            font-weight: 500 !important;
+            text-transform: uppercase;
           }
           &:last-child {
-            margin-right: 0;
+            margin-right: 0px;
           }
           &:hover {
-            i, a {
-              color: rgb(53, 126, 98);
-              transition: 0.5s;
+            a {
+              color: rgb(200, 162, 136);
+              transition: 0.2s all;
             }
           }
           
@@ -101,20 +112,261 @@
   }
 }
 
-//------- responsive -------
+
+// ============= navigation =============
+
+// ============= main-banner =============
+.main-banner {
+  .owl-carousel {
+    .owl-item.active {
+      .slide {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+        //---style of slide content---
+        .content-slide {
+          margin-left: 50px;
+          // width: 300px;
+          // height: 200px;
+          color: #fff;
+          p {
+            font-weight: 100;
+            font-size: 20px;
+            margin-bottom: 10px;
+            
+          }
+          h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            margin-bottom: 10px;
+            
+          }
+              
+          button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #fff;        
+            font-size: 14px;
+            cursor: pointer;
+            &:hover {
+              text-decoration: underline;
+            }
+            a {
+              color: #64524d;
+            }
+          }
+        }
+        //---style of slide content---
+      }
+            
+      .slide-1 {
+        background-image: url(../images/demo-banner-3.jpg);
+        .content-slide-1 {
+          p {
+            animation: animation-s1-p 0.3s 1s forwards;
+            opacity: 0;
+          }
+          h3 {
+            animation: animation-s1-h3 0.7s 1.5s forwards;
+            opacity: 0;
+          }
+          button {
+            animation: animation-s1-button 1.2s 2s forwards;
+            transition: all 0.3s;
+            opacity: 0;
+          }
+          //--- animation owl carousel ---
+          @keyframes animation-s1-p {
+            0% {
+              transform: translateX(-50%);
+              opacity: 1;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+          @keyframes animation-s1-h3 {
+            0% {
+              transform: translateX(200%);
+              opacity: 1;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+          @keyframes animation-s1-button {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+          //--- animation owl carousel ---
+        }
+      }
+      .slide-2 {
+        background-image: url(../images/demo-banner-4.jpg);
+        .content-slide-2 {
+          p {
+            animation: animation-s2-p 0.3s 1.5s forwards;
+            opacity: 0;
+          }
+          h3 {
+            animation: animation-s2-h3 0.7s 2.2s forwards;
+            opacity: 0;
+          }
+          button {
+            animation: animation-s2-button 1.2s 2.7s forwards;
+            transition: all 0.3s;
+            opacity: 0;
+          }
+          //--- animation owl carousel ---
+          @keyframes animation-s2-p {
+            0% {
+              transform: translateX(-50%);
+              opacity: 1;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+          @keyframes animation-s2-h3 {
+            0% {
+              transform: translateX(200%);
+              opacity: 1;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+          @keyframes animation-s2-button {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+          //--- animation owl carousel ---
+        }
+      }
+      .slide-3 {
+        background-image: url(../images/demo-banner-5.jpg);
+        .content-slide-3 {
+          p {
+            animation: animation-s3-p 0.3s 1.5s forwards;
+            opacity: 0;
+          }
+          h3 {
+            animation: animation-s3-h3 0.7s 2.2s forwards;
+            opacity: 0;
+          }
+          button {
+            animation: animation-s3-button 1.2s 2.7s forwards;
+            transition: all 0.3s;
+            opacity: 0;
+          }
+          //--- animation owl carousel ---
+          @keyframes animation-s3-p {
+            0% {
+              transform: translateX(-50%);
+              opacity: 1;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+          @keyframes animation-s3-h3 {
+            0% {
+              transform: translateX(200%);
+              opacity: 1;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+          @keyframes animation-s3-button {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+          //--- animation owl carousel ---
+        }
+      }
+    }
+    .owl-dots {
+      width: 100%;
+      text-align: end;
+      position: absolute;
+      bottom: 1%;
+      color: red;
+      .owl-dot.active span {
+        background-color: rgb(235, 197, 172);
+      }
+    }
+    .owl-nav {
+      @mixin button-prev-next {
+        position: absolute;
+        top: 50%;
+        color: black;
+        background-color: #fff;
+        font-size: 25px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+        opacity: 0.2;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      button.owl-prev {
+        @include button-prev-next();
+        left: 1%;
+      }
+      button.owl-next {
+        @include button-prev-next();
+        right: 1%;
+      }
+    }
+  }
+
+}
+// ============= main-banner =============
+
+
+// ================== RESPONSIVE ==================
+
 //các màn hình thường gặp
 // xs = extra small < 576
 // sm = small < 768
 // md = medium < 992
 // lg = large < 1200
 // xl = extra large >= 1200
-@media only screen and (max-width: 1210px) {
+@media only screen and (max-width: 1280px) {
   .container {
     width: 992px;
     margin: 0 auto;
   }
 }
-@media only screen and (max-width: 1002px) {
+@media only screen and (max-width: 1024px) {
   .container {
     width: 768px;
     margin: 0 auto;
@@ -151,15 +403,27 @@
           li {
             margin-right: 20px;
             a {
-              font-size: 18px;
+              font-size: 16px;
             }
           }
         }    
       }     
     }  
   }
+  .main-banner {
+    .owl-carousel {
+      .owl-item.active {
+        .slide {
+          width: 100%;
+          height: 80vh;
+          
+        }
+      }
+    }
+  }
+
 }
-@media only screen and (max-width: 778px) {
+@media only screen and (max-width: 793px) {
   .container {
     width: 576px;
     margin: 0 auto;
@@ -218,6 +482,24 @@
     width: 480px;
     margin: 0 auto;
   }
+  
 }
-//------- responsive -------
-// ============= navigation =============
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ================== RESPONSIVE ==================

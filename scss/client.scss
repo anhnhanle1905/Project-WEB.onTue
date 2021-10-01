@@ -383,6 +383,61 @@
 }
 // ============= section-wrapper =============
 
+// ============= best-seller =============
+.best-seller {
+  h3 {
+    font-family: "Archivo Narrow", sans-serif;
+    text-align: center;
+    margin-top: 70px;
+    padding: 0 20px;
+    font-size: 30px;
+    font-weight: 300 !important;
+  }
+  .items {
+    .item {
+
+      width: 31.33%;
+      height: 450px;
+      margin: 1%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center top;
+      overflow: hidden;
+      cursor: pointer;
+      .image {
+        img {   
+          width: 100%;
+        }
+      } 
+      .content {
+        width: 100%;
+        text-align: center;
+        
+        .name-product {
+          display: block;
+          padding: 5px;
+          font-size: 20px;
+          
+        }
+        .price-product {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .view-collection {
+    margin-top: 20px;
+    p {
+      font-size: 20px;
+      font-weight: 100 !important;
+      text-decoration: underline;
+      text-align: center;
+    }
+  }
+}
+
+// ============= best-seller =============
+
 
 
 
@@ -409,6 +464,24 @@
   .container {
     width: 992px;
     margin: 0 auto;
+  }
+  .best-seller {
+    .items {
+      
+      .item {
+        height: 370px;
+       
+        // .content {
+          
+        //   .name-product {
+
+        //   }
+        //   .price-product {
+            
+        //   }
+        // }
+      }
+    }
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -463,6 +536,22 @@
           height: 80vh;
           
         }
+      }
+    }
+  }
+  .best-seller {
+    .items {
+      .item {
+        height: 299px;
+        // .content {
+          
+        //   .name-product {
+
+        //   }
+        //   .price-product {
+            
+        //   }
+        // }
       }
     }
   }
@@ -521,10 +610,51 @@
       }     
     }  
   }
+  .best-seller {
+    .items {
+      .item {
+        width: 48%;
+        height: 340px;
+        // .content {
+          
+        //   .name-product {
+
+        //   }
+        //   .price-product {
+            
+        //   }
+        // }
+      }
+    }
+  }
 }
+
 @media only screen and (max-width: 587px) {
   .container {
     width: 480px;
+    margin: 0 auto;
+  }
+  .best-seller {
+    .items {
+      .item {
+        height: 285px;
+        // .content {
+          
+        //   .name-product {
+
+        //   }
+        //   .price-product {
+            
+        //   }
+        // }
+      }
+    }
+  }
+  
+}
+@media only screen and (max-width: 490px) {
+  .container {
+    width: 440px;
     margin: 0 auto;
   }
   

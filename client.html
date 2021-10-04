@@ -22,34 +22,68 @@
 
   <!-- ============= header =============   -->
     <div class="header">
-    
       <div class="container flex j-between">
-
         <div class="header-left">
+          <!-- logo and dropdown navigation -->
           <div class="logo">
             <a href=""
               ><img src="images/logo-envy.png" alt=""
-            /></a>
-            <i class="fas fa-bars"></i>
+            /></a>         
           </div>
+          <!-- burger bar for dropdown -->
+          <div class="burger">
+            <!-- <i class="fas fa-bars"></i> -->
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div> 
+          <!-- dropdown -->
+          <ul class="burger-dropdown">
+            <!-- btn out -->
+            <li class="btn-out">
+              <i class="fas fa-times"></i>
+            </li>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Skin care</a>
+            </li>
+            <li>
+              <a href="">Hair care</a>
+            </li>
+            <li>
+              <a href="">Body care</a>
+            </li>
+            <li>
+              <a href="">Make up</a>
+            </li>
+            <li>
+              <a href="">Blog</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+          </ul>
+          <!-- burger bar for dropdown -->
         </div>
-
         <div class="header-right flex j-between a-center">
           <div class="search">
-            <input type="text" class="search-products" placeholder="Tìm kiếm" />
+            <input type="text" class="search-products" placeholder="Search" />
             <i class="fas fa-search"></i>
           </div>
-          <div class="login">
-            <i class="far fa-user"></i>
-            <a href="">Đăng nhập</a>
-          </div>
+          
           <div class="cart">
             <i class="fas fa-shopping-cart"></i>
-            <a href="">Giỏ hàng</a>
+            <a href="">Cart</a>
           </div>
           <div class="like">
             <i class="far fa-heart"></i>
-            <a href="">Yêu thích</a>
+            <a href="">Like</a>
+          </div>
+          <div class="login">
+            <i class="far fa-user"></i>
+            <a href="">Login</a>
           </div>
         </div>
   
@@ -65,19 +99,19 @@
           <li> <!-- navigation left -->
             <ul class="nav-left flex">
               <li>
-                <a href="">Giới thiệu</a>
+                <a href="">Home</a>
               </li>
               <li>
-                <a href="">Chăm sóc tóc</a>
+                <a href="">Skin care</a>
               </li>
               <li>
-                <a href="">Chăm sóc da</a>
+                <a href="">Hair care</a>
               </li>
               <li>
-                <a href="">Trang điểm</a>
+                <a href="">Body care</a>
               </li>
               <li>
-                <a href="">Chăm sóc cơ thể</a>
+                <a href="">Make up</a>
               </li>
             </ul>
           </li>
@@ -88,7 +122,7 @@
                 <a href="">Blog</a>
               </li>
               <li>
-                <a href="">Liên hệ</a>
+                <a href="">Contact</a>
               </li>
               
             </ul>
@@ -104,7 +138,7 @@
     <!-- ============= main-banner ============= -->
     <div class="main-banner">
       <!-- -------- owl carousel ------- -->
-      <div class="owl-carousel owl-theme">
+      <div class="owl-carousel owl-theme" id="main-banner">
 
         <!-- slide-1 -->
         <div class="slide slide-1 flex a-center">  
@@ -174,7 +208,36 @@
     </div>
     <!-- ============= section-wrapper ============= -->
 
-    <!-- ============= best-seller ============= -->
+    <!-- ============= latest-product ============= -->
+    <div class="latest-product">
+      <div class="container">
+
+        <h3>LATEST PRODUCT</h3>
+
+        <div class="owl-carousel owl-theme" id="latest-product">
+          <!-- <div class="slide">
+            <div class="img-product">
+              <img src="./images/bsl-prod-1.jpg" alt="">
+            </div>
+            <div class="btn-add">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="info-product">
+              <div class="name">Bright Blush Powder</div>
+              <div class="price">$32.00</div>
+            </div>
+          </div>   -->
+        </div>
+        
+        <div class="view-collection">
+          <a href="">View collection</a>  
+        </div>
+        
+      </div>
+    </div>
+  <!-- ============= latest-product ============= -->
+
+  <!-- ============= best-seller ============= -->
     <div class="best-seller">
       <div class="container">
         <!-- tittle -->
@@ -187,7 +250,7 @@
 
         <!-- view collection -->
         <div class="view-collection">
-          <p>View collection</p>
+          <a href="">View collection</a>  
         </div>
 
 

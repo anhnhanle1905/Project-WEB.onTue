@@ -80,7 +80,6 @@
 
 // ============= navigation =============
 .header-nav {
-  
   padding: 10px;
   background-color: #F8EDE4;
   ul {
@@ -119,10 +118,10 @@
 .main-banner {
   margin-bottom: -10px;  
   .owl-carousel {
-    .owl-item.active {
+    .owl-item {
       .slide {
         width: 100%;
-        height: 100vh;
+        height: 80vh;
         position: relative;
         background-size: cover;
         background-repeat: no-repeat;
@@ -131,8 +130,6 @@
         //---style of slide content---
         .content-slide {
           margin-left: 50px;
-          // width: 300px;
-          // height: 200px;
           color: #fff;
           p {
             font-weight: 100;
@@ -167,6 +164,17 @@
             
       .slide-1 {
         background-image: url(../images/demo-banner-3.jpg);
+      }
+      .slide-2 {
+        background-image: url(../images/demo-banner-4.jpg);
+      }
+      .slide-3 {
+        background-image: url(../images/demo-banner-5.jpg);
+      }
+    }
+    .owl-item.active {
+      //animation 3 slide
+      .slide-1 {
         .content-slide-1 {
           p {
             animation: animation-s1-p 0.3s 1s forwards;
@@ -214,7 +222,6 @@
         }
       }
       .slide-2 {
-        background-image: url(../images/demo-banner-4.jpg);
         .content-slide-2 {
           p {
             animation: animation-s2-p 0.3s 1.5s forwards;
@@ -262,7 +269,6 @@
         }
       }
       .slide-3 {
-        background-image: url(../images/demo-banner-5.jpg);
         .content-slide-3 {
           p {
             animation: animation-s3-p 0.3s 1.5s forwards;
@@ -309,20 +315,43 @@
           //--- animation owl carousel ---
         }
       }
+      //animation 3 slide
     }
+
+    // custom dots owl carousel
     .owl-dots {
-      width: 100%;
-      text-align: end;
       position: absolute;
       bottom: 1%;
+      display: flex;
+      left: 50%;
+      transform: translateX(-50%);
+      .owl-dot {
+        border: 2px solid #fff;
+        border-radius: 50% !important;
+        width: 23px;
+        height: 23px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+      }
+      .owl-dot span {
+        background-color: transparent;
+        width: 15px;
+        height: 15px;
+        margin: 0;
+      }
       .owl-dot.active span {
         background-color: #e0bba9;
       }
     }
+    // custom dots owl carousel
+    // custom nav owl carousel
     .owl-nav {
-      @mixin button-prev-next {
+      button {
         position: absolute;
         top: 50%;
+        transform: translateY(-50%);
         color: black;
         background-color: #fff;
         font-size: 25px;
@@ -335,17 +364,19 @@
         opacity: 0.2;
         &:hover {
           opacity: 1;
+          background-color: #fff;
+          color: black;
         }
       }
+      
       button.owl-prev {
-        @include button-prev-next();
         left: 1%;
       }
-      button.owl-next {
-        @include button-prev-next();
+      button.owl-next { 
         right: 1%;
       }
     }
+    // custom nav owl carousel
   }
 
 }
@@ -417,7 +448,7 @@
           display: block;
           padding: 5px;
           font-size: 20px;
-          
+    
         }
         .price-product {
           font-size: 20px;
@@ -446,12 +477,6 @@
 
 
 
-
-
-
-
-
-
 // ================== RESPONSIVE ==================
 
 //các màn hình thường gặp
@@ -460,10 +485,24 @@
 // md = medium < 992
 // lg = large < 1200
 // xl = extra large >= 1200
-@media only screen and (max-width: 1280px) {
+
+
+//------------- PC -------------
+@media only screen and (min-width: 1200px) {
   .container {
-    width: 992px;
+    width: 1140px;
     margin: 0 auto;
+  }
+  .main-banner {
+    .owl-carousel {
+      .owl-item {
+        .slide {
+          width: 100%;
+          height: 90vh;
+          transition: 1s all;
+        }
+      }
+    }
   }
   .best-seller {
     .items {
@@ -484,9 +523,44 @@
     }
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   .container {
-    width: 768px;
+    width: 960px;
+    margin: 0 auto;
+  }
+  .main-banner {
+    .owl-carousel {
+      .owl-item {
+        .slide {
+          width: 100%;
+          height: 80vh;
+          transition: 1s all;
+        }
+      }
+    }
+  }
+  .best-seller {
+    .items {
+      
+      .item {
+        height: 370px;
+       
+        // .content {
+          
+        //   .name-product {
+
+        //   }
+        //   .price-product {
+            
+        //   }
+        // }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    width: 750px;
     margin: 0 auto;
   }
   .header {
@@ -515,13 +589,14 @@
     }
   }
   .header-nav {
+    padding: 5px;
     ul {
       li {
         ul {
           li {
-            margin-right: 20px;
+            margin-right: 10px;
             a {
-              font-size: 16px;
+              font-size: 14px;
             }
           }
         }    
@@ -530,11 +605,11 @@
   }
   .main-banner {
     .owl-carousel {
-      .owl-item.active {
+      .owl-item {
         .slide {
           width: 100%;
-          height: 80vh;
-          
+          height: 60vh;
+          transition: 1s all;
         }
       }
     }
@@ -557,9 +632,12 @@
   }
 
 }
-@media only screen and (max-width: 793px) {
+//------------- PC -------------
+
+//------------- TABLET -------------
+@media only screen and (max-width: 768px) {
   .container {
-    width: 576px;
+    width: 560px;
     margin: 0 auto;
   }
   .header {
@@ -571,8 +649,11 @@
         .fa-bars {
           display: block;
           cursor: pointer;
+          &:hover {
+            color: rgb(200, 162, 136);
+            transition: 0.2s all;
+          }
         }
-        
       }
     }
     .header-right {  
@@ -610,6 +691,44 @@
       }     
     }  
   }
+  .main-banner {
+    .owl-carousel {
+      .owl-item {
+        .slide {
+          width: 100%;
+          height: 60vh;
+          transition: 1s all;
+          .content-slide {
+            margin-left: 35px;
+          }
+        }
+      }
+      .owl-dots {
+        bottom: 7%;
+        .owl-dot {
+          width: 14px;
+          height: 14px;
+          display: flex;
+          margin: 3px;
+        }
+        .owl-dot span {
+          width: 10px;
+          height: 10px;
+          margin: 0;
+        }
+      }
+      .owl-nav {
+        button {
+          width: 25px;
+          height: 25px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .section-wrapper {
+    margin-top: -20px;
+  }
   .best-seller {
     .items {
       .item {
@@ -625,14 +744,55 @@
         //   }
         // }
       }
+      
+    }
+  }
+  .section-wrapper {
+    margin-top: -20px;
+    padding: 10px 0;
+    .item {
+      
+      span.item-head {
+        font-size: 12px;
+        padding: 0 5px;
+        margin-bottom: 2px;
+        font-weight: 100 !important;
+      }
+      span.item-sub {
+        font-size: 10px;
+      }
     }
   }
 }
 
-@media only screen and (max-width: 587px) {
+@media only screen and (max-width: 576px) {
   .container {
-    width: 480px;
+    width: 400px;
     margin: 0 auto;
+  }
+  .main-banner {
+    .owl-carousel {
+      .owl-item {
+        .slide {
+          width: 100%;
+          height: 50vh;
+          transition: 1s all;
+          .content-slide {
+            margin-left: 0px;
+            p {
+              font-size: 12px;
+              
+            }
+            h3 {
+              font-size: 24px;
+            }
+            button {
+              font-size: 9px;
+            }
+          }
+        }
+      }
+    }
   }
   .best-seller {
     .items {
@@ -648,17 +808,191 @@
         //   }
         // }
       }
+      .owl-dots {
+        bottom: 7%;
+        .owl-dot {
+          width: 14px;
+          height: 14px;
+          display: flex;
+          margin: 3px;
+        }
+        .owl-dot span {
+          width: 10px;
+          height: 10px;
+          margin: 0;
+        }
+      }
+      .owl-nav {
+        width: 10px;
+        height: 10px;
+        button {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+  .section-wrapper {
+    margin-top: -20px;
+    padding: 10px 0;
+    .item {
+      
+      span.item-head {
+        font-size: 12px;
+        padding: 0 5px;
+        margin-bottom: 2px;
+        font-weight: 100 !important;
+      }
+      span.item-sub {
+        font-size: 10px;
+      }
     }
   }
   
 }
-@media only screen and (max-width: 490px) {
+//------------- TABLET -------------
+
+//------------- MOBLIE -------------
+@media only screen and (max-width: 411px) {
   .container {
-    width: 440px;
+    width: 300px;
     margin: 0 auto;
+  }
+  .header {
+    .header-left {
+      .logo {
+        a {
+          display: none;
+        }
+        .fa-bars {
+          width: 20px;
+          display: block;
+          cursor: pointer;
+          margin-right: 10px;
+        }
+        
+      }
+    }
+    .header-right {  
+      width: 85%;
+      
+      .search {
+        width: 70%;
+      }
+      .fa-user, .fa-shopping-cart, .fa-heart {
+        margin-right: 1px;
+      }
+      
+      .login, .cart, .like {
+        font-size: 14px;
+        a {
+          display: none;
+        }
+        &:hover {
+          i, a {
+            color: rgb(200, 162, 136);
+            transition: 0.2s all;
+          }
+        }
+      }
+    }
+  }
+  .header-nav {
+    ul {
+      li {
+        ul {
+          li {
+            display: none;
+          }
+        }    
+      }     
+    }  
+  }
+  .main-banner {
+    .owl-carousel {
+      .owl-item {
+        .slide {
+          width: 100%;
+          height: 30vh;
+          transition: 1s all;
+          .content-slide {
+            margin-left: 0px;
+            p {
+              font-size: 10px;
+              
+            }
+            h3 {
+              font-size: 20px;
+            }
+            button {
+              font-size: 7px;
+            }
+          }
+        }
+      }
+      .owl-dots {
+        bottom: 7%;
+        .owl-dot {
+          width: 14px;
+          height: 14px;
+          display: flex;
+          margin: 3px;
+        }
+        .owl-dot span {
+          width: 10px;
+          height: 10px;
+          margin: 0;
+        }
+      }
+      // .owl-nav {
+      //   // width: 20px;
+      //   // height: 20px;
+        
+      //   button {
+      //     width: 10px;
+      //     height: 10px;
+      //     background-color: red;
+      //   }
+      // }
+    }
+  }
+  .section-wrapper {
+    margin-top: -20px;
+    padding: 10px 0;
+    .item {
+      
+      span.item-head {
+        font-size: 9px;
+        padding: 0 5px;
+        margin-bottom: 2px;
+        font-weight: 100 !important;
+      }
+      span.item-sub {
+        font-size: 8px;
+      }
+    }
+  }
+  .best-seller {
+    
+    .items {
+      .item {
+        width: 97%;
+        height: 380px;
+        // .content {
+          
+        //   .name-product {
+
+        //   }
+        //   .price-product {
+            
+        //   }
+        // }
+      }
+    }
   }
   
 }
+//------------- MOBLIE -------------
 
 
 

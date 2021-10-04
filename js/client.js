@@ -3,9 +3,13 @@ $(function () {
   $(".owl-carousel").owlCarousel({
     items: 1,
     autoplay: true,
-    autopalyTimeout: 5000, //5s
+    autoplaySpeed: 1000,
+    smartSpeed: 1200,
+    dots: true,
+    // autopalyTimeout: 5000, //5s
     // autoplayHoverPause: true,
-    doc: false,
+    // doc: false,
+    freeDrag: true,
     loop: true,
     nav: true,
     navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],

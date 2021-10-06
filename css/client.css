@@ -258,15 +258,15 @@
 }
 
 .main-banner .owl-carousel .owl-item .slide-1 {
-	background-image: url(../images/demo-banner-3.jpg);
+	background-image: url(../images/demo-banner/demo-banner-3.jpg);
 }
 
 .main-banner .owl-carousel .owl-item .slide-2 {
-	background-image: url(../images/demo-banner-4.jpg);
+	background-image: url(../images/demo-banner/demo-banner-4.jpg);
 }
 
 .main-banner .owl-carousel .owl-item .slide-3 {
-	background-image: url(../images/demo-banner-5.jpg);
+	background-image: url(../images/demo-banner/demo-banner-5.jpg);
 }
 
 .main-banner .owl-carousel .owl-item.active .slide-1 .content-slide-1 p {
@@ -432,12 +432,21 @@
 }
 
 .latest-product .owl-carousel .owl-item .slide {
-	overflow: hidden;
 	padding: 0 10px;
+	cursor: pointer;
+}
+
+.latest-product .owl-carousel .owl-item .slide .img-product {
+	overflow: hidden;
 }
 
 .latest-product .owl-carousel .owl-item .slide .img-product img {
 	max-width: 100%;
+	transition: .3s all;
+}
+
+.latest-product .owl-carousel .owl-item .slide .img-product img:hover {
+	transform: scale(1.25);
 }
 
 .latest-product .owl-carousel .owl-item .slide .btn-add {
@@ -506,6 +515,10 @@
 	right: 1%;
 }
 
+.latest-product .view-collection {
+	padding: 20px 0;
+}
+
 .latest-product .view-collection a {
 	font-family: Karla, serif;
 	font-size: 20px;
@@ -563,6 +576,197 @@
 	text-align: center;
 	text-decoration: underline;
 	color: black;
+}
+
+.skin-hair-body-makeup {
+	margin-top: 50px;
+	text-align: center;
+	background-color: #f7f7f7;
+}
+
+.skin-hair-body-makeup .grid-container {
+	display: grid;
+	width: 100%;
+	height: 140vh;
+	padding: 30px;
+	grid-template-areas: 'item1 item1 item4 item4' 'item1 item1 item4 item4' 'item1 item1 item3 item3' 'item1 item1 item3 item3' 'item2 item2 item3 item3' 'item2 item2 item3 item3' 'item2 item2 item3 item3';
+	grid-gap: 30px;
+}
+
+.skin-hair-body-makeup .grid-container .makeup {
+	position: relative;
+	border-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	grid-area: item1;
+}
+
+.skin-hair-body-makeup .grid-container .makeup::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, .194);
+}
+
+.skin-hair-body-makeup .grid-container .makeup::before {
+	font-size: 25px;
+	position: absolute;
+	display: flex;
+	content: 'MAKE UP';
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+}
+
+.skin-hair-body-makeup .grid-container .makeup::after {
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: flex;
+	content: 'Shop now';
+	transform: translate(-50%, 100%);
+	text-decoration: underline;
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+}
+
+.skin-hair-body-makeup .grid-container .body {
+	position: relative;
+	border-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	grid-area: item2;
+}
+
+.skin-hair-body-makeup .grid-container .body::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, .194);
+}
+
+.skin-hair-body-makeup .grid-container .body::before {
+	font-size: 25px;
+	position: absolute;
+	display: flex;
+	content: 'BODY CARE';
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+}
+
+.skin-hair-body-makeup .grid-container .body::after {
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: flex;
+	content: 'Shop now';
+	transform: translate(-50%, 100%);
+	text-decoration: underline;
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+}
+
+.skin-hair-body-makeup .grid-container .skin {
+	position: relative;
+	border-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	grid-area: item3;
+}
+
+.skin-hair-body-makeup .grid-container .skin::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, .194);
+}
+
+.skin-hair-body-makeup .grid-container .skin::before {
+	font-size: 25px;
+	position: absolute;
+	display: flex;
+	content: 'SKIN CARE';
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+}
+
+.skin-hair-body-makeup .grid-container .skin::after {
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: flex;
+	content: 'Shop now';
+	transform: translate(-50%, 100%);
+	text-decoration: underline;
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+}
+
+.skin-hair-body-makeup .grid-container .hair {
+	position: relative;
+	border-radius: 10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	grid-area: item4;
+}
+
+.skin-hair-body-makeup .grid-container .hair::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, .194);
+}
+
+.skin-hair-body-makeup .grid-container .hair::before {
+	font-size: 25px;
+	position: absolute;
+	display: flex;
+	content: 'HAIR CARE';
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+}
+
+.skin-hair-body-makeup .grid-container .hair::after {
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: flex;
+	content: 'Shop now';
+	transform: translate(-50%, 100%);
+	text-decoration: underline;
+	color: #fff;
+	align-items: center;
+	justify-content: center;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -785,6 +989,10 @@
 
 .section-wrapper .item span.item-sub {
 	font-size: 10px;
+}
+
+.skin-hair-body-makeup .grid-container {
+	grid-template-areas: 'item1 item1' 'item1 item1' 'item1 item1' 'item1 item1' 'item2 item2' 'item2 item2' 'item2 item2' 'item2 item2' 'item3 item3' 'item3 item3' 'item3 item3' 'item3 item3' 'item4 item4' 'item4 item4' 'item4 item4' 'item4 item4';
 }
 
 }

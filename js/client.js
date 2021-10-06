@@ -63,37 +63,37 @@ $(function () {
   const latestProducts = [
     {
       "id": 1,
-      "srcimg": "./images/latest-product-1.jpg",
+      "srcimg": "./images/latest-product/latest-product-1.jpg",
       "name": "Fixair Product Sample",
       "price": 120.00,
     },
     {
       "id": 2,
-      "srcimg": "./images/latest-product-2.jpg",
+      "srcimg": "./images/latest-product/latest-product-2.jpg",
       "name": "Fixair Product Sample",
       "price": 40.00,
     },
     {
       "id": 3,
-      "srcimg": "./images/latest-product-3.jpg",
+      "srcimg": "./images/latest-product/latest-product-3.jpg",
       "name": "Fixair Product Sample",
       "price": 20.00,
     },
     {
       "id": 4,
-      "srcimg": "./images/latest-product-4.jpg",
+      "srcimg": "./images/latest-product/latest-product-4.jpg",
       "name": "Fixair Product Sample",
       "price": 60.00,
     },
     {
       "id": 5,
-      "srcimg": "./images/latest-product-5.jpg",
+      "srcimg": "./images/latest-product/latest-product-5.jpg",
       "name": "Fixair Product Sample",
       "price": 70.00,
     },
     {
       "id": 6,
-      "srcimg": "./images/latest-product-6.jpg",
+      "srcimg": "./images/latest-product/latest-product-6.jpg",
       "name": "Fixair Product Sample",
       "price": 10.00,
     },
@@ -135,37 +135,43 @@ $(function () {
   const bestSellerProducts = [
     {
       "id": 1,
-      "srcimg": "./images/bsl-prod-1.jpg",
+      "srcimg": "./images/best-seller/bsl-prod-1.jpg",
+      "srcimgChange": "./images/bsl-changeImg-1.jpg",
       "name": "Fixair Product Sample",
       "price": 120.00,
     },
     {
       "id": 2,
-      "srcimg": "./images/bsl-prod-2.jpg",
+      "srcimg": "./images/best-seller/bsl-prod-2.jpg",
+      "srcimgChange": "./images/bsl-changeImg-2.jpg",
       "name": "Fixair Product Sample",
       "price": 40.00,
     },
     {
       "id": 3,
-      "srcimg": "./images/bsl-prod-3.jpg",
+      "srcimg": "./images/best-seller/bsl-prod-3.jpg",
+      "srcimgChange": "./images/bsl-changeImg-3.jpg",
       "name": "Fixair Product Sample",
       "price": 20.00,
     },
     {
       "id": 4,
-      "srcimg": "./images/bsl-prod-4.png",
+      "srcimg": "./images/best-seller/bsl-prod-4.jpg",
+      "srcimgChange": "./images/bsl-changeImg-4.jpg",
       "name": "Fixair Product Sample",
       "price": 60.00,
     },
     {
       "id": 5,
-      "srcimg": "./images/bsl-prod-5.jpg",
+      "srcimg": "./images/best-seller/bsl-prod-5.jpg",
+      "srcimgChange": "./images/bsl-changeImg-5.jpg",
       "name": "Fixair Product Sample",
       "price": 70.00,
     },
     {
       "id": 6,
-      "srcimg": "./images/bsl-prod-6.png",
+      "srcimg": "./images/best-seller/bsl-prod-6.jpg",
+      "srcimgChange": "./images/bsl-changeImg-6.jpg",
       "name": "Fixair Product Sample",
       "price": 10.00,
     },
@@ -173,18 +179,15 @@ $(function () {
 
   renderBestSellerProducts(bestSellerProducts);
 
-
-  // $(".best-seller .items .image").hover(function () {
-  //     // over
-  //     renderProducts(bestSellerProducts);
-      
-  //   }, function () {
-  //     renderBestSellerProducts(bestSellerProducts);
-  //   }
-  // );
-  
-
 });
+
+//animation hover change img
+function setNewImage(id) {
+  document.getElementById(id).src = `./images/best-seller/bsl-changeImg-${id}.jpg`
+}
+function setOldImage(id) {
+  document.getElementById(id).src = `./images/best-seller/bsl-prod-${id}.jpg`
+}
 
 
 function renderBestSellerProducts(list) {
@@ -193,7 +196,11 @@ function renderBestSellerProducts(list) {
     `
     <div class="item">
       <div class="image">
-        <img src="${val.srcimg}" alt="">
+        <img id="${val.id}" 
+        onmouseover="setNewImage(${val.id})" 
+        onmouseout="setOldImage(${val.id})" 
+        src="${val.srcimg}" 
+        alt="">
       </div>
       <div class="content">
         <p class="name-product">${val.name}</p>
@@ -204,23 +211,7 @@ function renderBestSellerProducts(list) {
     ).appendTo(".items");
   })
 }
-// function renderProducts(list) {
-//   list.map((val, index) => {
-//     $(
-//     `
-//     <div class="item">
-//       <div class="image">
-//         <img src="${val.img}" alt="">
-//       </div>
-//       <div class="content">
-//         <p class="name-product">${val.name}</p>
-//         <span class="price-product">$${val.price}</span>
-//       </div>
-//     </div>
-//   `
-//     ).appendTo(".items");
-//   })
-// }
+
   
 // ========= best seller ========= 
 

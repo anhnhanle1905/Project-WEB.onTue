@@ -35,6 +35,10 @@
 	justify-content: flex-end;
 }
 
+* {
+	font-family: 'Courier New', Courier, monospace;
+}
+
 .container {
 	width: 1200px;
 	margin: 0 auto;
@@ -424,11 +428,11 @@
 }
 
 .latest-product h3 {
-	font-family: 'Archivo Narrow', sans-serif;
-	font-size: 25px;
-	font-weight: 300 !important;
+	font-size: 30px;
+	font-weight: 500 !important;
 	padding: 50px 20px;
 	text-align: center;
+	letter-spacing: 3px;
 }
 
 .latest-product .owl-carousel .owl-item .slide {
@@ -520,7 +524,6 @@
 }
 
 .latest-product .view-collection a {
-	font-family: Karla, serif;
 	font-size: 20px;
 	text-align: center;
 	text-decoration: underline;
@@ -528,16 +531,16 @@
 }
 
 .best-seller {
-	margin-top: 30px;
+	margin: 50px;
 	text-align: center;
 }
 
 .best-seller h3 {
-	font-family: 'Archivo Narrow', sans-serif;
-	font-size: 25px;
-	font-weight: 300 !important;
+	font-size: 30px;
+	font-weight: 500 !important;
 	padding: 50px 20px;
 	text-align: center;
+	letter-spacing: 3px;
 }
 
 .best-seller .items .item {
@@ -546,6 +549,7 @@
 	height: 450px;
 	margin: 1%;
 	cursor: pointer;
+	border: 1px solid #f7f7f7;
 }
 
 .best-seller .items .item .image img {
@@ -571,7 +575,6 @@
 }
 
 .best-seller .view-collection a {
-	font-family: Karla, serif;
 	font-size: 20px;
 	text-align: center;
 	text-decoration: underline;
@@ -579,7 +582,7 @@
 }
 
 .skin-hair-body-makeup {
-	margin-top: 50px;
+	margin: 50px 0;
 	text-align: center;
 	background-color: #f7f7f7;
 }
@@ -767,6 +770,115 @@
 	color: #fff;
 	align-items: center;
 	justify-content: center;
+}
+
+.viewport {
+	height: 50vh;
+	margin: 50px 0;
+	background-color: #f7f7f7;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 65%;
+}
+
+.viewport .content {
+	width: 30%;
+}
+
+.viewport .content span {
+	font-size: 12px;
+	font-weight: 100 !important;
+	letter-spacing: 1.5px;
+}
+
+.viewport .content h3 {
+	font-size: 20px;
+	font-weight: 300 !important;
+	margin: 10px 0;
+}
+
+.viewport .content p {
+	margin-bottom: 10px;
+}
+
+.viewport .content a {
+	text-decoration: underline;
+	color: #000;
+}
+
+.beauty-club-blog h3 {
+	font-size: 30px;
+	font-weight: 500 !important;
+	padding: 50px 20px;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+.beauty-club-blog .items .item {
+	display: flex;
+	overflow: hidden;
+	width: 31.33%;
+	height: 350px;
+	margin: 1%;
+	text-align: start;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100%;
+	align-items: flex-end;
+}
+
+.beauty-club-blog .items .item .content {
+	color: #333;
+}
+
+.beauty-club-blog .items .item .content a {
+	font-size: 18px;
+	font-weight: 400 !important;
+	cursor: pointer;
+	color: #333;
+}
+
+.beauty-club-blog .items .item .content span.date {
+	font-size: 14px;
+	font-weight: 100 !important;
+	display: block;
+	margin: 15px 0;
+}
+
+.beauty-club-blog .items .item .content a.continue {
+	font-size: 14px;
+	text-decoration: underline;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.beauty-club-blog .view-more {
+	margin: 30px;
+}
+
+.beauty-club-blog .view-more a {
+	padding: 10px 20px;
+	text-align: center;
+	color: #fff;
+	border-radius: 2px;
+	background-color: #000;
+}
+
+.beauty-club-blog .view-more a:hover {
+	text-decoration: underline;
+}
+
+.video {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background-color: red;
+}
+
+.video iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -995,6 +1107,36 @@
 	grid-template-areas: 'item1 item1' 'item1 item1' 'item1 item1' 'item1 item1' 'item2 item2' 'item2 item2' 'item2 item2' 'item2 item2' 'item3 item3' 'item3 item3' 'item3 item3' 'item3 item3' 'item4 item4' 'item4 item4' 'item4 item4' 'item4 item4';
 }
 
+.viewport {
+	height: 30vh;
+}
+
+.viewport .content p {
+	font-size: 12px;
+}
+
+.viewport .content a {
+	font-size: 12px;
+}
+
+.beauty-club-blog .items .item {
+	width: 100%;
+	height: 300px;
+	margin: 3%;
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+}
+
+.beauty-club-blog .items .item .content {
+	width: 70%;
+	color: #fff;
+}
+
+.beauty-club-blog .items .item .content a {
+	color: #fff;
+}
+
 }
 
 @media only screen and (max-width: 576px) {
@@ -1191,6 +1333,60 @@
 .best-seller .items .item {
 	width: 97%;
 	height: 380px;
+}
+
+.viewport {
+	height: 20vh;
+}
+
+.viewport .content span {
+	font-size: 8px;
+	letter-spacing: 1px;
+}
+
+.viewport .content h3 {
+	font-size: 10px;
+	margin: 5px 0;
+}
+
+.viewport .content p {
+	font-size: 7px;
+	margin-bottom: 5px;
+}
+
+.viewport .content a {
+	font-size: 8px;
+}
+
+.beauty-club-blog .items .item {
+	width: 100%;
+	height: 200px;
+	margin: 3%;
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+}
+
+.beauty-club-blog .items .item .content {
+	width: 70%;
+	color: #fff;
+}
+
+.beauty-club-blog .items .item .content a {
+	font-size: 9px;
+	color: #fff;
+}
+
+.beauty-club-blog .items .item .content span.date {
+	font-size: 7px;
+}
+
+.beauty-club-blog .items .item .content a.continue {
+	font-size: 7px;
+}
+
+.beauty-club-blog .view-more {
+	font-size: 12px;
 }
 
 }

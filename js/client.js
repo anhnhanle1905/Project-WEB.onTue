@@ -53,7 +53,7 @@ $(function () {
         items: 2,
         nav: false,
       },
-      768: {
+      769: {
         items: 4,
         nav: true,
       }
@@ -189,7 +189,6 @@ function setOldImage(id) {
   document.getElementById(id).src = `./images/best-seller/bsl-prod-${id}.jpg`
 }
 
-
 function renderBestSellerProducts(list) {
   list.map((val, index) => {
     $(
@@ -208,12 +207,55 @@ function renderBestSellerProducts(list) {
       </div>
     </div>
   `
-    ).appendTo(".items");
+    ).appendTo(".best-seller .items");
   })
 }
 
   
 // ========= best seller ========= 
+
+// ========= beauty club blog ========= 
+$(function () {
+  const beautyClubBlog = [
+    {
+      "id": 1,
+      "srcimg": "./images/beauty-club-blog/beauty-club-blog-1.jpg",
+      "name": "FALL-ING FOR YOU — BEAUTY TRENDS WE'RE OBSESSING OVER", 
+      "date": "SEPTEMBER 12, 2021"
+    },
+    {
+      "id": 2,
+      "srcimg": "./images/beauty-club-blog/beauty-club-blog-2.jpg",
+      "name": "ROUTINE REBEL — BEAUTY TIPS", 
+      "date": "MAY 29, 2021"
+    },
+    {
+      "id": 3,
+      "srcimg": "./images/beauty-club-blog/beauty-club-blog-3.jpg",
+      "name": "BEAUTY BUYS — MUST-HAVES IN YOUR BAG THIS FALL", 
+      "date": "APRIL 19, 2021"
+    },
+  ];
+
+  renderBeautyClubBlog(beautyClubBlog);
+
+});
+function renderBeautyClubBlog(list) {
+  list.map((val, index) => {
+    $(
+    `
+    <div class="item" style="background-image:url(${val.srcimg});">
+      <div class="content">
+        <a href="">${val.name}</a>
+        <span class="date">${val.date}</span>
+        <a class="continue" href="">Continue reading</a>
+      </div>
+    </div>
+  `
+    ).appendTo(".beauty-club-blog .items");
+  })
+}
+// ========= beauty club blog ========= 
 
 
 
